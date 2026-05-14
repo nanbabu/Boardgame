@@ -9,7 +9,7 @@ pipeline {
     stages {   
         stage('Compile') {
             steps {
-            sh 'mvn compile'
+            git branch: 'main', url: 'https://github.com/nanbabu/Boardgame.git'
             }
         }
         
