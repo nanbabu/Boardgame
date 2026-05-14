@@ -21,6 +21,11 @@ pipeline {
                 sh 'mvn test'
             }
         }
+        stage('GIT-Leaks') {
+            steps {
+                sh 'gitleaks detect --source . -r 1.json'
+            }
+        }
 
         stage('Sonar') {
             steps {
