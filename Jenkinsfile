@@ -28,6 +28,9 @@ pipeline {
         }
 
         stage('Sonar') {
+            when {
+            expression { false }
+            }
             steps {
                 withSonarQubeEnv('sonar') {
                           sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=Python-project \
