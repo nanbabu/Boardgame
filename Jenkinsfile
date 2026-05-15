@@ -10,7 +10,7 @@ pipeline {
 //}
     
     stages {   
-        stage('Compile') {
+        stage('git-Checkout') {
             steps {
             git branch: 'main', url: 'https://github.com/nanbabu/Boardgame.git'
             }
